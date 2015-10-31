@@ -25,6 +25,10 @@ public class BatteryView extends View{
     public BatteryView(Context context, AttributeSet attrs) {
         this(context, attrs, 0);
     }
+	
+	public void setPercentage(int p){
+		this.percentage = p;
+	}
 
     public BatteryView(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
