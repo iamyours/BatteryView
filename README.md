@@ -1,4 +1,5 @@
 # BatteryView
+[ ![Download](https://api.bintray.com/packages/iamyours/maven/BatteryView/images/download.svg) ](https://bintray.com/iamyours/maven/BatteryView/_latestVersion)
 ## Usage
 ### 1. Gradle dependency
 ```
