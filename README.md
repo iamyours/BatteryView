@@ -2,7 +2,7 @@
 [ ![Download](https://api.bintray.com/packages/iamyours/maven/BatteryView/images/download.svg) ](https://bintray.com/iamyours/maven/BatteryView/_latestVersion)
 ## Gradle
 ```
-compile 'com.iamyours.ui:batteryview:0.1.1'
+compile 'com.iamyours.ui:BatteryView:0.1.2'
 ```
 ## example
 ```

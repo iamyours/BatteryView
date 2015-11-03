@@ -28,6 +28,7 @@ public class BatteryView extends View{
 	
 	public void setPercentage(int p){
 		this.percentage = p;
+        invalidate();
 	}
 
     public BatteryView(Context context, AttributeSet attrs, int defStyleAttr) {
@@ -63,16 +64,15 @@ public class BatteryView extends View{
         paint.setColor(color);
         paint.setStyle(Paint.Style.STROKE);
         float strokeWidth = height/20.0f;
-        int strokeWidth2 = (int) (strokeWidth/2.0 + 0.5);
-        Log.i(TAG,"w1:"+strokeWidth+",w2"+strokeWidth2);
+        float strokeWidth2 = strokeWidth/2;
         paint.setStrokeWidth(strokeWidth);
         //电池头部宽高
         int headHeight = (int) (strokeWidth+0.5f);
         //外框
-        Rect rect = new Rect(strokeWidth2,headHeight+strokeWidth2,width-strokeWidth2,height-strokeWidth2);
+        RectF rect = new RectF(strokeWidth2,headHeight+strokeWidth2,width-strokeWidth2,height-strokeWidth2);
         canvas.drawRect(rect, paint);
         paint.setStrokeWidth(0);
-        int topOffset = (int) ((height-headHeight-strokeWidth)*(100- percentage)/100.0f+0.5);
+        float topOffset = (height-headHeight-strokeWidth)*(100- percentage)/100.0f;
         RectF rect2 = new RectF(strokeWidth, headHeight+strokeWidth+topOffset,width-strokeWidth,height-strokeWidth);
         paint.setStyle(Paint.Style.FILL);
         canvas.drawRect(rect2,paint);
